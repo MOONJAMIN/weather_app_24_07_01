@@ -1,11 +1,18 @@
-const App = () => {
+import { HashRouter, Route, Routes } from "react-router";
+
+const Router = () => {
   return (
-    <div>
-      <h1>여기까지 </h1>
-    </div>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={""} />
+        <Route path="/login" element={""} />
+        <Route path="/singup" element={""} />
+        <Route path="/*" element={""} />
+      </Routes>
+    </HashRouter>
   );
 };
-export default App;
+export default Router;
 
 // *git
 // => 파일의 변경, 추가, 삭제 등 파일이 기존내용에서
