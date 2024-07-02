@@ -1,13 +1,17 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
+import { Login } from "./pages/Login";
+import { SingUp } from "./pages/SingUp";
+import { PageNotFound } from "./pages/PageNotFound";
+import { Home } from "./pages/Home";
 
 const Router = () => {
   return (
     <HashRouter>
       <Routes>
-        <Route path="/" element={""} />
-        <Route path="/login" element={""} />
-        <Route path="/singup" element={""} />
-        <Route path="/*" element={""} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/singup" element={<SingUp />} />
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </HashRouter>
   );
